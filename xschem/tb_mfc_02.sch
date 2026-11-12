@@ -29,8 +29,8 @@ logx=0
 logy=0
 x2=10n}
 B 2 600 220 1400 620 {flags=graph
-y1=-25u
-y2=25u
+y1=-35u
+y2=35u
 ypos1=0
 ypos2=2
 divy=5
@@ -42,8 +42,9 @@ divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node=i(vmeas)
-color=12
+node="i(vmeas)
+i(vmeas_px)"
+color="6 21"
 dataset=-1
 unitx=1
 logx=0
@@ -58,6 +59,16 @@ lab=sbd}
 N 40 -210 40 -140 {
 lab=sbd}
 N 40 -80 40 -30 {
+lab=GND}
+N -510 410 -440 410 {
+lab=gate}
+N -380 410 -300 410 {
+lab=#net2}
+N 0 410 50 410 {
+lab=sbd_parax}
+N 50 410 50 480 {
+lab=sbd_parax}
+N 50 540 50 590 {
 lab=GND}
 C {devices/code.sym} -300 90 0 0 {name=TT_MODELS
 only_toplevel=true
@@ -97,3 +108,17 @@ device=resistor
 m=1}
 C {devices/lab_wire.sym} 40 -210 0 1 {name=p2 sig_type=std_logic lab=sbd}
 C {mfc_02.sym} -160 -210 0 0 {name=x1}
+C {devices/gnd.sym} 50 590 0 0 {name=l1 lab=GND}
+C {devices/ipin.sym} -510 410 0 0 {name=p3 lab=gate}
+C {devices/ammeter.sym} -410 410 3 0 {name=Vmeas_px savecurrent=true}
+C {devices/res.sym} 50 510 0 0 {name=R2
+value=10
+footprint=1206
+device=resistor
+m=1}
+C {devices/lab_wire.sym} 50 410 0 1 {name=p4 sig_type=std_logic lab=sbd_parax}
+C {mfc_02.sym} -150 410 0 0 {name=x2
+schematic=mfc_02_parax.sim
+spice_sym_def="tcleval(.include [file normalize ../mag/mfc_02.sim.spice])"
+tclcommand="textwindow [file normalize ../mag/mfc_02.sim.spice]"
+}

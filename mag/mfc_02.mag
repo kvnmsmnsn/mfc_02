@@ -1,21 +1,23 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1793673321
-<< error_s >>
-rect 129 165 187 171
-rect 129 131 141 165
-rect 129 125 187 131
-rect 129 -281 187 -275
-rect 129 -315 141 -281
-rect 129 -321 187 -315
+timestamp 1794504535
+<< viali >>
+rect 300 -292 334 -256
 << metal1 >>
-rect 612 14 812 214
-rect 612 -422 812 -222
-use sky130_fd_pr__nfet_01v8_8ULSVF  XM2
-timestamp 1793673321
-transform 1 0 158 0 1 -75
-box -211 -378 211 378
+rect 612 118 812 214
+rect 128 68 812 118
+rect 612 14 812 68
+rect 292 -256 340 -250
+rect 612 -256 812 -222
+rect 92 -292 300 -256
+rect 334 -292 812 -256
+rect 292 -298 340 -292
+rect 612 -422 812 -292
+use sky130_fd_pr__nfet_01v8_8UHSCB  XM2
+timestamp 1794504535
+transform 1 0 158 0 1 -106
+box -211 -347 211 347
 << labels >>
 flabel metal1 612 14 812 214 0 FreeSans 256 0 0 0 gate
 port 0 nsew
